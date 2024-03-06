@@ -53,7 +53,7 @@
   isHome: true,
   isHighlightShrink: false,
   isToc: false,
-  postUpdate: '2024-03-06 09:44:27'
+  postUpdate: '2024-03-06 13:38:23'
 }</script><script>(win=>{
       win.saveToLocal = {
         set: (key, value, ttl) => {
@@ -150,7 +150,106 @@
         }
       }
       detectApple()
-    })(window)</script><meta name="generator" content="Hexo 7.1.1"></head><body><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">7</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">1</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">1</div></a></div><hr class="custom-hr"/></div></div><div class="page" id="body-wrap"><header class="full_page" id="page-header"><nav id="nav"><span id="blog-info"><a href="/" title="Mq-Lv"><span class="site-name">Mq-Lv</span></a></span><div id="menus"><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="site-info"><h1 id="site-title">Mq-Lv</h1></div><div id="scroll-down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout" id="content-inner"><div class="recent-posts" id="recent-posts"><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2024/03/06/MySQL%E5%9F%BA%E7%A1%80%E7%AF%87/" title="项目经历写法">项目经历写法</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2024-03-06T01:28:00.049Z" title="Created 2024-03-06 09:28:00">2024-03-06</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E6%89%BE%E5%B7%A5%E4%BD%9C/">找工作</a></span></div><div class="content">导入表的问题导入数据时外键约束问题
+    })(window)</script><meta name="generator" content="Hexo 7.1.1"></head><body><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">15</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">3</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">3</div></a></div><hr class="custom-hr"/></div></div><div class="page" id="body-wrap"><header class="full_page" id="page-header"><nav id="nav"><span id="blog-info"><a href="/" title="Mq-Lv"><span class="site-name">Mq-Lv</span></a></span><div id="menus"><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="site-info"><h1 id="site-title">Mq-Lv</h1></div><div id="scroll-down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout" id="content-inner"><div class="recent-posts" id="recent-posts"><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2024/03/06/3_%E5%93%88%E5%B8%8C%E8%A1%A8/" title="算法刷题—哈希表">算法刷题—哈希表</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2024-03-06T05:29:17.518Z" title="Created 2024-03-06 13:29:17">2024-03-06</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E7%AE%97%E6%B3%95/">算法</a></span></div><div class="content">3_哈希表总结：
+什么时候使用哈希法，当我们需要查询一个元素是否出现过，或者一个元素是否在集合里的时候，就要第一时间想到哈希法。
+
+
+当遇到要快速判断一个元素是否出现在集合里的时候，就要考虑哈希法！
+在做面试题目的时候遇到需要判断一个元素是否出现过的场景也应该第一时间想到哈希法！
+哈希法也是牺牲了空间换取了时间，因为我们要使用额外的数组，set或者是map来存放数据，才能实现快速的查找。
+当题目中数值的取值大小限制时，可以选用数组来做哈希题目
+当要求输出结果唯一，且不考虑输出结果的顺序时，使用集合set来做
+
+代码问题：
+字符串String中元素的个数使用函数length()获取
+数组中的长度是数组的属性，使用length获取
+string.charAt(i)可以获取string中特定位置的字符
+collection.add()添加元素；collection.remove()删除元素；collection.contains()元素包含问题；collection.size()包含元素的个数
+集合框架中的类型首字母都是大写
+value   map.getOrDefault(key,defa ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2024/03/06/%E6%80%BB%E7%AC%94%E8%AE%B0/" title="算法刷题—总笔记">算法刷题—总笔记</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2024-03-06T05:29:17.518Z" title="Created 2024-03-06 13:29:17">2024-03-06</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E7%AE%97%E6%B3%95/">算法</a></span></div><div class="content">
+第一遍主要关注于低中难度的题，不要纠结高难度的题目
+记录并抓住高频题，这是首先应该关注的。在这些高频题搞定后，在去看那些低频题。（不要上来就想面面俱到）
+对于经典类型的题，可以总结出其模板，以便于快速的写出其代码。
+看到一道题时：注意先使用注释去搭好框架；
+
+</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2024/03/06/2_%E9%93%BE%E8%A1%A8/" title="算法刷题—链表">算法刷题—链表</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2024-03-06T05:29:17.506Z" title="Created 2024-03-06 13:29:17">2024-03-06</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E7%AE%97%E6%B3%95/">算法</a></span></div><div class="content">2_链表总结：
+链表类题目一般都有两种方法：
+直接使用原来的链表来进行操作
+设置一个虚拟头节点再进行操作
+
+
+注意双链表的使用
+一般将虚拟头节点作为cur，之后虚拟头节点不变，从而保证虚拟头节点.next即为要返回的head
+
+1、基础理论
+链表：通过指针串联起来的线性结构，每一个节点由两部分组成：数据+指针
+链表的入口节点称为链表的头节点（head）
+
+
+1.1、链表的类型
+单链表
+
+指针指向下一个节点，最后一个节点的指针为null
+
+双链表：每一个节点有两个指针域，一个指向上一个节点，一个指向下一个节点。即可以向前查询又可以向后查询
+
+
+循环链表：可以解决约瑟夫环问题
+
+
+
+1.2、链表的存储方式链表通过指针域的指针连接内存中的各个节点，所以在内存中不是连续分布的，而是散乱的分别在内存中的某地址上，分配机制取决于操作系统的内存管理
+1.3、链表的定义：以单链表为例：
+123456789101112131415161718public class ListNode &#123;    // 结点的值    int val;    // 下一个结点    ListNode next;  ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2024/03/06/1__%E6%95%B0%E7%BB%84/" title="算法刷题—数组">算法刷题—数组</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2024-03-06T05:29:17.506Z" title="Created 2024-03-06 13:29:17">2024-03-06</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E7%AE%97%E6%B3%95/">算法</a></span></div><div class="content">1__数组1、理论基础
+数组是存放在连续内存空间上的相同类型数据的集合。
+
+需要两点注意的是
+
+数组下标都是从0开始的。
+数组内存空间的地址是连续的
+
+
+二维数组在内存的空间地址是连续的么？
+在C++中二维数组是连续分布的。在Java中没有指针，同时也不对程序员暴露其元素的地址，寻址操作完全交给虚拟机。所以不好说。
+
+
+2、经典题目（模板总结）2.1、二分查找思路：
+
+定义上下界（注意上界为数组长度减1）（数组长度为.length）
+通过while循环，来更新上下界。（注意循环条件为上界&gt;=下界，而不是&gt;）
+更新上下界：计算中间索引mid，并根据中间索引值来判断索引的更新与返回。（注意更新时上界&#x3D;min-1，下界&#x3D;mid+1）
+如果未在循环中返回就返回-1.
+
+
+这里其实使用了双向指针
+注意“循环不变量原则”：即在每次循环中，边界的处理都要坚持统一的区间定义（左闭右闭即[left, right]，左闭右开即[left, right)，左开右闭即(left, right]）
+
+1234567891011121314151617181920class Sol ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2024/03/06/MySQL%E4%BA%8B%E5%8A%A1%E7%AF%87/" title="MySQL高级篇-事务基础知识">MySQL高级篇-事务基础知识</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2024-03-06T04:37:30.707Z" title="Created 2024-03-06 12:37:30">2024-03-06</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/MySQL%E5%AD%A6%E4%B9%A0/">MySQL学习</a></span></div><div class="content">第13章_事务基础知识1. 数据库事务概述1.1 存储引擎支持情况SHOW ENGINES 命令来查看当前 MySQL 支持的存储引擎都有哪些，以及这些存储引擎是否支持事务。
+
+能看出在 MySQL 中，只有InnoDB 是支持事务的。
+1.2 基本概念事务：一组逻辑操作单元，使数据从一种状态变换到另一种状态。
+事务处理的原则：保证所有事务都作为 一个工作单元 来执行，即使出现了故障，都不能改变这种执行方 式。当在一个事务中执行多个操作时，要么所有的事务都被提交( commit )，那么这些修改就 永久 地保 存下来；要么数据库管理系统将 放弃 所作的所有 修改 ，整个事务回滚( rollback )到最初状态。
+1234# 案例：AA用户给BB用户转账100update account set money = money - 100 where name = &#x27;AA&#x27;;# 服务器宕机update account set money = money + 100 where name = &#x27;BB&#x27;;
+
+1.3 事务的ACID特性
+原子性（atomi ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2024/03/06/MySQL%E6%97%A5%E5%BF%97%E4%B8%8E%E5%A4%87%E4%BB%BD%E7%AF%87/" title="MySQL高级篇-其他数据库日志">MySQL高级篇-其他数据库日志</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2024-03-06T04:37:30.705Z" title="Created 2024-03-06 12:37:30">2024-03-06</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/MySQL%E5%AD%A6%E4%B9%A0/">MySQL学习</a></span></div><div class="content">第17章_其他数据库日志
+千万不要小看日志。很多看似奇怪的问题，答案往往就藏在日志里。很多情况下，只有通过查看日志才 能发现问题的原因，真正解决问题。所以，一定要学会查看日志，养成检查日志的习惯，对提升你的数 据库应用开发能力至关重要。
+MySQL8.0 官网日志地址：“ https://dev.mysql.com/doc/refman/8.0/en/server-logs.html ”
+1. MySQL支持的日志1.1 日志类型MySQL有不同类型的日志文件，用来存储不同类型的日志，分为 二进制日志 、 错误日志 、 通用查询日志 和 慢查询日志 ，这也是常用的4种。MySQL 8又新增两种支持的日志： 中继日志 和 数据定义语句日志 。使 用这些日志文件，可以查看MySQL内部发生的事情。
+这6类日志分别为：
+
+慢查询日志：记录所有执行时间超过long_query_time的所有查询，方便我们对查询进行优化。 
+通用查询日志：记录所有连接的起始时间和终止时间，以及连接发送给数据库服务器的所有指令， 对我们复原操作的实际场景、发现问题，甚至是对数据库操作的审计都有很大的帮助。 
+错误 ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2024/03/06/MySQL%E6%9E%B6%E6%9E%84%E7%AF%87/" title="MySQL高级篇-逻辑架构">MySQL高级篇-逻辑架构</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2024-03-06T04:37:30.704Z" title="Created 2024-03-06 12:37:30">2024-03-06</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/MySQL%E5%AD%A6%E4%B9%A0/">MySQL学习</a></span></div><div class="content">第04章_逻辑架构1. 逻辑架构剖析1.1 服务器处理客户端请求首先MySQL是典型的C&#x2F;S架构，即Clinet/Server 架构，服务端程序使用的mysqld。
+不论客户端进程和服务器进程是采用哪种方式进行通信，最后实现的效果是：客户端进程向服务器进程发送一段文本（SQL语句），服务器进程处理后再向客户端进程发送一段文本（处理结果）。
+那服务器进程对客户端进程发送的请求做了什么处理，才能产生最后的处理结果呢？这里以查询请求为 例展示：
+
+下面具体展开如下：
+
+1.2 ConnectorsConnectors, 指的是不同语言中与SQL的交互。MySQL首先是一个网络程序，在TCP之上定义了自己的应用层协议。所以要使用MySQL，我们可以编写代码，跟MySQL Server 建立TCP连接，之后按照其定义好的协议进行交互。或者比较方便的方法是调用SDK，比如Native C API、JDBC、PHP等各语言MySQL Connecotr,或者通过ODBC。但通过SDK来访问MySQL，本质上还是在TCP连接上通过MySQL协议跟MySQL进行交互
+接下来的MySQL Ser ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2024/03/06/MySQL%E7%B4%A2%E5%BC%95%E5%8F%8A%E8%B0%83%E4%BC%98%E7%AF%87/" title="MySQL高级篇-索引的数据结构">MySQL高级篇-索引的数据结构</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2024-03-06T04:37:30.703Z" title="Created 2024-03-06 12:37:30">2024-03-06</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/MySQL%E5%AD%A6%E4%B9%A0/">MySQL学习</a></span></div><div class="content">第06章_索引的数据结构1. 为什么使用索引索引是存储引擎用于快速找到数据记录的一种数据结构，就好比一本教科书的目录部分，通过目录中找到对应文章的页码，便可快速定位到需要的文章。MySQL中也是一样的道理，进行数据查找时，首先查看查询条件是否命中某条索引，符合则通过索引查找相关数据，如果不符合则需要全表扫描，即需要一条一条地查找记录，直到找到与条件符合的记录。
+
+如上图所示，数据库没有索引的情况下，数据分布在硬盘不同的位置上面，读取数据时，摆臂需要前后摆动查询数据，这样操作非常消耗时间。如果数据顺序摆放，那么也需要从1到6行按顺序读取，这样就相当于进行了6次IO操作，依旧非常耗时。如果我们不借助任何索引结构帮助我们快速定位数据的话，我们查找 Col 2 &#x3D; 89 这条记录，就要逐行去查找、去比较。从Col 2 &#x3D; 34 开始，进行比较，发现不是，继续下一行。我们当前的表只有不到10行数据，但如果表很大的话，有上千万条数据，就意味着要做很多很多次硬盘I/0才能找到。现在要查找 Col 2 &#x3D; 89 这条记录。CPU必须先去磁盘查找这条记录，找到之后加载到内存 ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2024/03/06/MySQL%E5%9F%BA%E7%A1%80%E7%AF%87/" title="MySQL基础篇">MySQL基础篇</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2024-03-06T01:28:00.049Z" title="Created 2024-03-06 09:28:00">2024-03-06</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/MySQL%E5%AD%A6%E4%B9%A0/">MySQL学习</a></span></div><div class="content">导入表的问题导入数据时外键约束问题
 数据导入指令：
 1source d:\xxx.sql
 
@@ -189,93 +288,11 @@ MySQL 在 Linux 环境下是大小写敏感的
 
 动手能力强，有探索精神，拆过路由器，笔记本，组装过PC，很早就用过XXC，最早的一批XXX用户。尝试使用各个云服务的产品，对象存储，云服务器，CDN 等等。 
 
-在开发中对待问题具有认真求索的精神，能够在短时间内解决问题并理解知识点。并且 ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2024/03/05/%E9%A1%B9%E7%9B%AE%E7%BB%8F%E5%8E%86%E5%86%99%E6%B3%95/" title="项目经历写法">项目经历写法</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2024-03-05T15:10:11.585Z" title="Created 2024-03-05 23:10:11">2024-03-05</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E6%89%BE%E5%B7%A5%E4%BD%9C/">找工作</a></span></div><div class="content">本文我给出，C++和java 以及前端项目的具体写法，其他语言的话，也可以参考： 
-看了一位录友的简历。
-【项目经验】都堆在一起了。  
-
-建议【项目经验】分 「项目描述」「个人工作」「个人收获」这三块来写，不要堆在一起。例如这样：
-
-或者在写一写「项目难点」例如这样：
-
-至于「技术栈」可写可不写。例如有的同学在【项目经验】中把技术栈都写出来了，例如这样：
-
-这样写的好处是让面试官快速了解，你这个项目的技术栈。缺点是列出一大堆技术，怕面试官详选一个细问起来，自己在回答不上来。
-不写 「技术栈」的话就在 「个人收获」 写一写自己使用某一技术的心得，这样把面试问题缩小到自己可以把控的点上。 
-例如这样：
-
-前端项目写法：
-  
-
-转载：知识星球
-</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2024/03/05/%E5%AE%9E%E4%B9%A0%E7%BB%8F%E5%8E%86%E5%86%99%E6%B3%95/" title="实习经历写法">实习经历写法</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2024-03-05T15:10:11.572Z" title="Created 2024-03-05 23:10:11">2024-03-05</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E6%89%BE%E5%B7%A5%E4%BD%9C/">找工作</a></span></div><div class="content">实习都做了什么。实习中遇到了哪些问题（技术上，开发流程上，部门沟通上）。你是如何解决这些问题的。实习中收获了什么技术上成长 （学习了哪些技术组件，自己有没有去深挖）代码风格上  （如何写出易于维护的代码）开发流程上 （单元检测，打日志，Git团队合作）对业务理解能力上 （如果把业务场景转为系统设计转为工程代码，都考虑了哪些问题）也可以适当把同事工作的内容写自己简历上，但前提是自己一定要研究清楚，否则就是给自己挖坑「实习收获」模板写法：（不建议原封不动的抄，很容易重复） ，建议根据自己的实习内容，学到的具体技术来写。模板写法一：对团队开发的流程有了更加深刻的理解，提升了自身的技术水平，学会了技术文档的编写，锻炼了开发的思维，更加注重程序的可维护性、模块化和可读性，是自己明白了快速学习新知识并将其运动到业务的重要性。模板写法二：熟悉了企业项目的开发流程，提升了个人能力，其中包括但不仅限于:快速接受新事物代码规范、良好的开发习惯(如先画整体架构图)、团队协作(如及时沟通)、问题的快速定位等。
-
-转载：知识星球
-</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2024/03/05/%E7%AE%80%E5%8E%86%E4%B8%AD%E4%B8%93%E4%B8%9A%E6%8A%80%E8%83%BD%E7%9A%84%E5%86%99%E6%B3%95/" title="简历中专业技能的写法">简历中专业技能的写法</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2024-03-05T15:10:11.570Z" title="Created 2024-03-05 23:10:11">2024-03-05</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E6%89%BE%E5%B7%A5%E4%BD%9C/">找工作</a></span></div><div class="content">很多同学【专业技能】这块写的很少，其实不是掌握的少，而是没有表达出来。
-例如有的同学这么写：
-
-
-
-
-这些【专业技能】都写的很少，其实是可以在丰富一些的。
-我来给大家拓展一下、
-
-熟练C++，（列举C++的若干知识点），了解 Java，python，go （适当补充对这些语言的理解）
-熟悉常见设计模式（例句一些设计模式）
-熟悉linux操作系统vim开发环境，（列举网络编程相关知识，例如epoll，socket等等）
-熟悉网络，（列举网络协议相关考点，tcp&#x2F;ip,http, https, 三次，四次握手，流量控制等等）
-数量掌握数据结构与算法（列举常用算法，最好搞透一个算法，说对该算法有独到见解）
-数量使用Git，等版本控制 
-以上为公共写法，下面可以在补充自己的其他领域的内容
-
-针对以上这个模板， 再来补充相关内容： （可以缩小面试官提问范围，把问题具体一点，你也可以有针对性的准备）
-
-熟悉C&#x2F;C++，熟练使用C的指针应用及内存管理，C++的封装继承多态，STL常用容器，C++11常用特性(智能指针等) ，了解 Python，Gtest等。
-熟悉常用设计模式(单 ...</div></div></div><div class="recent-post-item"><div class="recent-post-info"><a class="article-title" href="/2024/03/05/%E5%B0%9A%E7%A1%85%E8%B0%B7_%E5%AE%8B%E7%BA%A2%E5%BA%B7_%E7%AC%AC01%E7%AB%A0_Java%E8%AF%AD%E8%A8%80%E6%A6%82%E8%BF%B0/" title="java">java</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2024-03-05T13:55:29.627Z" title="Created 2024-03-05 21:55:29">2024-03-05</time></span></div><div class="content">第01章_Java语言概述讲师：尚硅谷-宋红康（江湖人称：康师傅）
-官网：http://www.atguigu.com
-
-1. Java知识脉络图1.1 Java基础全程脉络图
-1.2 本章专题与脉络
-
-2. 抽丝剥茧话Java2.1 当前大学生就业形势
-麦可思研究院发布了《2022年中国大学生就业报告》，针对2021届毕业生收入较高的本科专业排行榜：
-
-
-
-
-麦可思研究院发布过《2021年中国大学生就业报告》，应届本科毕业生就业数量较大的前十位行业类的就业质量：
-
-
-报告还对毕业三年后的2017届毕业生所在十大行业进行了统计：
-
-
-
-
-
-从国家统计局发布的2021年全国平均工资来看，不管在城镇非私营单位还是私营单位，IT业均为最高。
-
-2.2 IT互联网是否依旧靠谱过去不能代表未来！互联网是否依旧靠谱？！
-
-
-
-2014 年至 2018 年间，我国网民规模从 6.49 亿增长为 8.29 亿，增幅为 27.5%。同一时间段，全国移动互联网接入的流量却从 20.6EB 增长到了 711.1EB，增幅达 3352%（获取和处理的信息量大幅增加）。 
-随着 5G 技术进一步拓宽移动互联网的 ...</div></div></div><div class="recent-post-item"><div class="recent-post-info"><a class="article-title" href="/2024/03/05/hello-world/" title="Hello World">Hello World</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2024-03-05T12:02:20.761Z" title="Created 2024-03-05 20:02:20">2024-03-05</time></span></div><div class="content">Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Quick StartCreate a new post1$ hexo new &quot;My New Post&quot;
-
-More info: Writing
-Run server1$ hexo server
-
-More info: Server
-Generate static files1$ hexo generate
-
-More info: Generating
-Deploy to remote sites1$ hexo deploy
-
-More info: Deployment
-</div></div></div><nav id="pagination"><div class="pagination"><span class="page-number current">1</span></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">Mq-Lv</div><div class="author-info__description">日常学习博客</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">7</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">1</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">1</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/Mq-Lv"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>Announcement</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Post</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/03/06/MySQL%E5%9F%BA%E7%A1%80%E7%AF%87/" title="项目经历写法">项目经历写法</a><time datetime="2024-03-06T01:28:00.049Z" title="Created 2024-03-06 09:28:00">2024-03-06</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/03/05/%E8%87%AA%E6%88%91%E8%AF%84%E4%BB%B7%E5%86%99%E6%B3%95/" title="自我评价写法">自我评价写法</a><time datetime="2024-03-05T15:10:11.586Z" title="Created 2024-03-05 23:10:11">2024-03-05</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/03/05/%E9%A1%B9%E7%9B%AE%E7%BB%8F%E5%8E%86%E5%86%99%E6%B3%95/" title="项目经历写法">项目经历写法</a><time datetime="2024-03-05T15:10:11.585Z" title="Created 2024-03-05 23:10:11">2024-03-05</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/03/05/%E5%AE%9E%E4%B9%A0%E7%BB%8F%E5%8E%86%E5%86%99%E6%B3%95/" title="实习经历写法">实习经历写法</a><time datetime="2024-03-05T15:10:11.572Z" title="Created 2024-03-05 23:10:11">2024-03-05</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/03/05/%E7%AE%80%E5%8E%86%E4%B8%AD%E4%B8%93%E4%B8%9A%E6%8A%80%E8%83%BD%E7%9A%84%E5%86%99%E6%B3%95/" title="简历中专业技能的写法">简历中专业技能的写法</a><time datetime="2024-03-05T15:10:11.570Z" title="Created 2024-03-05 23:10:11">2024-03-05</time></div></div></div></div><div class="card-widget card-categories"><div class="item-headline">
+在开发中对待问题具有认真求索的精神，能够在短时间内解决问题并理解知识点。并且 ...</div></div></div><nav id="pagination"><div class="pagination"><span class="page-number current">1</span><a class="page-number" href="/page/2/#content-inner">2</a><a class="extend next" rel="next" href="/page/2/#content-inner"><i class="fas fa-chevron-right fa-fw"></i></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">Mq-Lv</div><div class="author-info__description">日常学习博客</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">15</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">3</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">3</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/Mq-Lv"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>Announcement</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Post</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/03/06/3_%E5%93%88%E5%B8%8C%E8%A1%A8/" title="算法刷题—哈希表">算法刷题—哈希表</a><time datetime="2024-03-06T05:29:17.518Z" title="Created 2024-03-06 13:29:17">2024-03-06</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/03/06/%E6%80%BB%E7%AC%94%E8%AE%B0/" title="算法刷题—总笔记">算法刷题—总笔记</a><time datetime="2024-03-06T05:29:17.518Z" title="Created 2024-03-06 13:29:17">2024-03-06</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/03/06/2_%E9%93%BE%E8%A1%A8/" title="算法刷题—链表">算法刷题—链表</a><time datetime="2024-03-06T05:29:17.506Z" title="Created 2024-03-06 13:29:17">2024-03-06</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/03/06/1__%E6%95%B0%E7%BB%84/" title="算法刷题—数组">算法刷题—数组</a><time datetime="2024-03-06T05:29:17.506Z" title="Created 2024-03-06 13:29:17">2024-03-06</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/03/06/MySQL%E4%BA%8B%E5%8A%A1%E7%AF%87/" title="MySQL高级篇-事务基础知识">MySQL高级篇-事务基础知识</a><time datetime="2024-03-06T04:37:30.707Z" title="Created 2024-03-06 12:37:30">2024-03-06</time></div></div></div></div><div class="card-widget card-categories"><div class="item-headline">
             <i class="fas fa-folder-open"></i>
             <span>Categories</span>
             
             </div>
             <ul class="card-category-list" id="aside-cat-list">
-            <li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E6%89%BE%E5%B7%A5%E4%BD%9C/"><span class="card-category-list-name">找工作</span><span class="card-category-list-count">5</span></a></li>
-            </ul></div><div class="card-widget card-tags"><div class="item-headline"><i class="fas fa-tags"></i><span>Tags</span></div><div class="card-tag-cloud"><a href="/tags/%E7%AE%80%E5%8E%86/" style="font-size: 1.1em; color: #999">简历</a></div></div><div class="card-widget card-archives"><div class="item-headline"><i class="fas fa-archive"></i><span>Archives</span></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2024/03/"><span class="card-archive-list-date">March 2024</span><span class="card-archive-list-count">7</span></a></li></ul></div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>Info</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">Article :</div><div class="item-count">7</div></div><div class="webinfo-item"><div class="item-name">UV :</div><div class="item-count" id="busuanzi_value_site_uv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">PV :</div><div class="item-count" id="busuanzi_value_site_pv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">Last Update :</div><div class="item-count" id="last-push-date" data-lastPushDate="2024-03-06T01:44:27.756Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2024 By Mq-Lv</div><div class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="Toggle Between Light And Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle between Single-column and Double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="Setting"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="Back To Top"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=4.13.0"></script><script src="/js/main.js?v=4.13.0"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.33/dist/fancybox/fancybox.umd.min.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
+            <li class="card-category-list-item "><a class="card-category-list-link" href="/categories/MySQL%E5%AD%A6%E4%B9%A0/"><span class="card-category-list-name">MySQL学习</span><span class="card-category-list-count">5</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E6%89%BE%E5%B7%A5%E4%BD%9C/"><span class="card-category-list-name">找工作</span><span class="card-category-list-count">4</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E7%AE%97%E6%B3%95/"><span class="card-category-list-name">算法</span><span class="card-category-list-count">4</span></a></li>
+            </ul></div><div class="card-widget card-tags"><div class="item-headline"><i class="fas fa-tags"></i><span>Tags</span></div><div class="card-tag-cloud"><a href="/tags/MySQL/" style="font-size: 1.5em; color: #99a9bf">MySQL</a> <a href="/tags/%E7%AE%97%E6%B3%95/" style="font-size: 1.1em; color: #999">算法</a> <a href="/tags/%E7%AE%80%E5%8E%86/" style="font-size: 1.1em; color: #999">简历</a></div></div><div class="card-widget card-archives"><div class="item-headline"><i class="fas fa-archive"></i><span>Archives</span></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2024/03/"><span class="card-archive-list-date">March 2024</span><span class="card-archive-list-count">15</span></a></li></ul></div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>Info</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">Article :</div><div class="item-count">15</div></div><div class="webinfo-item"><div class="item-name">UV :</div><div class="item-count" id="busuanzi_value_site_uv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">PV :</div><div class="item-count" id="busuanzi_value_site_pv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">Last Update :</div><div class="item-count" id="last-push-date" data-lastPushDate="2024-03-06T05:38:23.496Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2024 By Mq-Lv</div><div class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="Toggle Between Light And Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle between Single-column and Double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="Setting"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="Back To Top"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=4.13.0"></script><script src="/js/main.js?v=4.13.0"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.33/dist/fancybox/fancybox.umd.min.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
