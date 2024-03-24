@@ -1,0 +1,320 @@
+<!DOCTYPE html><html lang="en" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>计算机网络-运输层-应用层 | Mq-Lv</title><meta name="author" content="Mq-Lv"><meta name="copyright" content="Mq-Lv"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="1、运输层概述  2、端口号   3、TCP和UDP的对比      4、TCP的流量控制     即使接收窗口为0，TCP规定，接收端也必须能够接收零窗口探测报文段、确认报文段，以及携带有紧急数据的报文段。  5、TCP的拥塞控制     过程    在TCP双发建立逻辑连接关系时，cwnd被设置为1 发送方每收到一个对新报文段的确认时，就将拥塞窗口+1            快重传">
+<meta property="og:type" content="article">
+<meta property="og:title" content="计算机网络-运输层-应用层">
+<meta property="og:url" content="http://example.com/2024/03/24/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C-%E8%BF%90%E8%BE%93%E5%B1%82/index.html">
+<meta property="og:site_name" content="Mq-Lv">
+<meta property="og:description" content="1、运输层概述  2、端口号   3、TCP和UDP的对比      4、TCP的流量控制     即使接收窗口为0，TCP规定，接收端也必须能够接收零窗口探测报文段、确认报文段，以及携带有紧急数据的报文段。  5、TCP的拥塞控制     过程    在TCP双发建立逻辑连接关系时，cwnd被设置为1 发送方每收到一个对新报文段的确认时，就将拥塞窗口+1            快重传">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png">
+<meta property="article:published_time" content="2024-03-24T13:47:23.210Z">
+<meta property="article:modified_time" content="2024-03-24T14:49:44.079Z">
+<meta property="article:author" content="Mq-Lv">
+<meta property="article:tag" content="计算机网络">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://example.com/2024/03/24/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C-%E8%BF%90%E8%BE%93%E5%B1%82/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css?v=4.13.0"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.1/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.33/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: 'Copy Successful',
+    error: 'Copy Error',
+    noSupport: 'Browser Not Supported'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: 'Just now',
+    min: 'minutes ago',
+    hour: 'hours ago',
+    day: 'days ago',
+    month: 'months ago'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.11.1/dist/infinitegrid.min.js',
+    buttonText: 'Load More'
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '计算机网络-运输层-应用层',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2024-03-24 22:49:44'
+}</script><script>(win=>{
+      win.saveToLocal = {
+        set: (key, value, ttl) => {
+          if (ttl === 0) return
+          const now = Date.now()
+          const expiry = now + ttl * 86400000
+          const item = {
+            value,
+            expiry
+          }
+          localStorage.setItem(key, JSON.stringify(item))
+        },
+      
+        get: key => {
+          const itemStr = localStorage.getItem(key)
+      
+          if (!itemStr) {
+            return undefined
+          }
+          const item = JSON.parse(itemStr)
+          const now = Date.now()
+      
+          if (now > item.expiry) {
+            localStorage.removeItem(key)
+            return undefined
+          }
+          return item.value
+        }
+      }
+    
+      win.getScript = (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        script.onerror = reject
+        script.onload = script.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          script.onload = script.onreadystatechange = null
+          resolve()
+        }
+
+        Object.keys(attr).forEach(key => {
+          script.setAttribute(key, attr[key])
+        })
+
+        document.head.appendChild(script)
+      })
+    
+      win.getCSS = (url, id = false) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onerror = reject
+        link.onload = link.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          link.onload = link.onreadystatechange = null
+          resolve()
+        }
+        document.head.appendChild(link)
+      })
+    
+      win.activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+        if (t === 'dark') activateDarkMode()
+        else if (t === 'light') activateLightMode()
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+      const detectApple = () => {
+        if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+          document.documentElement.classList.add('apple')
+        }
+      }
+      detectApple()
+    })(window)</script><meta name="generator" content="Hexo 7.1.1"></head><body><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">17</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">5</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">5</div></a></div><hr class="custom-hr"/></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header"><nav id="nav"><span id="blog-info"><a href="/" title="Mq-Lv"><span class="site-name">Mq-Lv</span></a></span><div id="menus"><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">计算机网络-运输层-应用层</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">Created</span><time class="post-meta-date-created" datetime="2024-03-24T13:47:23.210Z" title="Created 2024-03-24 21:47:23">2024-03-24</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">Updated</span><time class="post-meta-date-updated" datetime="2024-03-24T14:49:44.079Z" title="Updated 2024-03-24 22:49:44">2024-03-24</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/">计算机网络</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="计算机网络-运输层-应用层"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">Post Views:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1 id="1、运输层概述"><a href="#1、运输层概述" class="headerlink" title="1、运输层概述"></a>1、运输层概述</h1><p><img src="/%5Cpic%5C%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C.assets%5C1711249808235.png" alt="1711249808235"></p>
+<p><img src="/%5Cpic%5C%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C.assets%5C1711249889659.png" alt="1711249889659"></p>
+<h1 id="2、端口号"><a href="#2、端口号" class="headerlink" title="2、端口号"></a>2、端口号</h1><p><img src="/%5Cpic%5C%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C.assets%5C1711250029155.png" alt="1711250029155"></p>
+<p><img src="/%5Cpic%5C%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C.assets%5C1711250547632.png" alt="1711250547632"></p>
+<p><img src="/%5Cpic%5C%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C.assets%5C1711250665181.png" alt="1711250665181"></p>
+<h1 id="3、TCP和UDP的对比"><a href="#3、TCP和UDP的对比" class="headerlink" title="3、TCP和UDP的对比"></a>3、TCP和UDP的对比</h1><p><img src="/%5Cpic%5C%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C.assets%5C1711257228181.png" alt="1711257228181"></p>
+<p><img src="/%5Cpic%5C%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C.assets%5C1711256458478.png" alt="1711256458478"></p>
+<p><img src="/%5Cpic%5C%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C.assets%5C1711256506745.png" alt="1711256506745"></p>
+<p><img src="/%5Cpic%5C%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C.assets%5C1711256710761.png" alt="1711256710761"></p>
+<p><img src="/%5Cpic%5C%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C.assets%5C1711256979743.png" alt="1711256979743"></p>
+<p><img src="/%5Cpic%5C%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C.assets%5C1711257136916.png" alt="1711257136916"></p>
+<h1 id="4、TCP的流量控制"><a href="#4、TCP的流量控制" class="headerlink" title="4、TCP的流量控制"></a>4、TCP的流量控制</h1><p><img src="/%5Cpic%5C%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C.assets%5C1711257467424.png" alt="1711257467424"></p>
+<p><img src="/%5Cpic%5C%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C.assets%5C1711257761979.png" alt="1711257761979"></p>
+<p><img src="/%5Cpic%5C%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C.assets%5C1711257827050.png" alt="1711257827050"></p>
+<p><img src="/%5Cpic%5C%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C.assets%5C1711257893187.png" alt="1711257893187"></p>
+<ul>
+<li><strong><font color='red'>即使接收窗口为0，TCP规定，接收端也必须能够接收零窗口探测报文段、确认报文段，以及携带有紧急数据的报文段。</font></strong></li>
+</ul>
+<h1 id="5、TCP的拥塞控制"><a href="#5、TCP的拥塞控制" class="headerlink" title="5、TCP的拥塞控制"></a>5、TCP的拥塞控制</h1><p><img src="/%5Cpic%5C%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C.assets%5C1711258511749.png" alt="1711258511749"></p>
+<p><img src="/%5Cpic%5C%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C.assets%5C1711258632856.png" alt="1711258632856"></p>
+<p><img src="/%5Cpic%5C%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C.assets%5C1711258951965.png" alt="1711258951965"></p>
+<p><img src="/%5Cpic%5C%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C.assets%5C1711259514470.png" alt="1711259514470"></p>
+<ul>
+<li><strong><font color='red'>过程</font></strong></li>
+</ul>
+<p><img src="/%5Cpic%5C%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C.assets%5C1711259895931.png" alt="1711259895931"></p>
+<ul>
+<li><font color='red'><strong>在TCP双发建立逻辑连接关系时，cwnd被设置为1</strong></font></li>
+<li><strong><font color='red'>发送方每收到一个对新报文段的确认时，就将拥塞窗口+1</font></strong></li>
+</ul>
+<p><img src="/%5Cpic%5C%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C.assets%5C1711259950945.png" alt="1711259950945"></p>
+<p><img src="/%5Cpic%5C%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C.assets%5C1711259981352.png" alt="1711259981352"></p>
+<p><img src="/%5Cpic%5C%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C.assets%5C1711260007754.png" alt="1711260007754"></p>
+<p><img src="/%5Cpic%5C%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C.assets%5C1711260028921.png" alt="1711260028921"></p>
+<p><img src="/%5Cpic%5C%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C.assets%5C1711260057891.png" alt="1711260057891"></p>
+<p><img src="/%5Cpic%5C%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C.assets%5C1711260085962.png" alt="1711260085962"></p>
+<p><img src="/%5Cpic%5C%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C.assets%5C1711260154842.png" alt="1711260154842"></p>
+<p><img src="/%5Cpic%5C%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C.assets%5C1711262175892.png" alt="1711262175892"></p>
+<p><img src="/%5Cpic%5C%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C.assets%5C1711262410785.png" alt="1711262410785"></p>
+<ul>
+<li><strong><font color='red'>快重传</font></strong></li>
+</ul>
+<p><img src="/%5Cpic%5C%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C.assets%5C1711262614548.png" alt="1711262614548"></p>
+<p><img src="/%5Cpic%5C%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C.assets%5C1711262704982.png" alt="1711262704982"></p>
+<p><img src="/%5Cpic%5C%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C.assets%5C1711262852292.png" alt="1711262852292"></p>
+<p><img src="/%5Cpic%5C%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C.assets%5C1711262952324.png" alt="1711262952324"></p>
+<h1 id="6、TCP超时重传时间的选择"><a href="#6、TCP超时重传时间的选择" class="headerlink" title="6、TCP超时重传时间的选择"></a>6、TCP超时重传时间的选择</h1><p><img src="/%5Cpic%5C%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C.assets%5C1711263355616.png" alt="1711263355616"></p>
+<p><img src="/%5Cpic%5C%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C.assets%5C1711263417484.png" alt="1711263417484"></p>
+<p><img src="/%5Cpic%5C%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C.assets%5C1711263510389.png" alt="1711263510389"></p>
+<p><img src="/%5Cpic%5C%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C.assets%5C1711263672852.png" alt="1711263672852"></p>
+<p><img src="/%5Cpic%5C%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C.assets%5C1711263765795.png" alt="1711263765795"></p>
+<p><img src="/%5Cpic%5C%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C.assets%5C1711263954342.png" alt="1711263954342"></p>
+<h1 id="7、TCP可靠传输的实现"><a href="#7、TCP可靠传输的实现" class="headerlink" title="7、TCP可靠传输的实现"></a>7、TCP可靠传输的实现</h1><p><img src="/%5Cpic%5C%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C.assets%5C1711264239035.png" alt="1711264239035"></p>
+<p><img src="/%5Cpic%5C%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C.assets%5C1711264255784.png" alt="1711264255784"></p>
+<p><img src="/%5Cpic%5C%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C.assets%5C1711264379474.png" alt="1711264379474"></p>
+<p><img src="/%5Cpic%5C%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C.assets%5C1711264544832.png" alt="1711264544832"></p>
+<p><img src="/%5Cpic%5C%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C.assets%5C1711264760727.png" alt="1711264760727"></p>
+<h1 id="8、TCP运输连接管理"><a href="#8、TCP运输连接管理" class="headerlink" title="8、TCP运输连接管理"></a>8、TCP运输连接管理</h1><p><img src="/%5Cpic%5C%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C.assets%5C1711265070070.png" alt="1711265070070"></p>
+<h2 id="8-1、三次握手"><a href="#8-1、三次握手" class="headerlink" title="8.1、三次握手"></a>8.1、三次握手</h2><p><img src="/%5Cpic%5C%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C.assets%5C1711265570313.png" alt="1711265570313"></p>
+<ul>
+<li><strong><font color='red'>SYN被设置为1的报文不能携带数据，但会消耗一个序号</font></strong></li>
+<li><font color='red'><strong>普通的TCP确认报文段可以携带数据，但如果不携带数据就不消耗序号</strong></font></li>
+<li><strong><font color='red'>FIN等于1的报文段即使不携带数据，也要消耗掉一个序号</font></strong></li>
+</ul>
+<p><img src="/%5Cpic%5C%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C.assets%5C1711265123084.png" alt="1711265123084"></p>
+<p><img src="/%5Cpic%5C%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C.assets%5C1711265208734.png" alt="1711265208734"></p>
+<p><img src="/%5Cpic%5C%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C.assets%5C1711265228176.png" alt="1711265228176"></p>
+<p><img src="/%5Cpic%5C%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C.assets%5C1711266098905.png" alt="1711266098905"></p>
+<h4 id="为什么不能是2次握手？"><a href="#为什么不能是2次握手？" class="headerlink" title="为什么不能是2次握手？"></a><strong><font color='red'>为什么不能是2次握手？</font></strong></h4><p><img src="/%5Cpic%5C%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C.assets%5C1711266200312.png" alt="1711266200312"></p>
+<h2 id="8-2、四报文挥手"><a href="#8-2、四报文挥手" class="headerlink" title="8.2、四报文挥手"></a>8.2、四报文挥手</h2><p><img src="/%5Cpic%5C%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C.assets%5C1711267239754.png" alt="1711267239754"></p>
+<h4 id="最后等待两个最长报文段寿命的原因"><a href="#最后等待两个最长报文段寿命的原因" class="headerlink" title="最后等待两个最长报文段寿命的原因"></a><strong><font color='red'>最后等待两个最长报文段寿命的原因</font></strong></h4><p><img src="/%5Cpic%5C%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C.assets%5C1711267655167.png" alt="1711267655167"></p>
+<ul>
+<li><strong><font color='red'>确保TCP服务进程可以收到最后一个确认报文段而进入关闭状态</font></strong></li>
+<li><strong><font color='red'>另外，等待两倍MSL时长，可以使本次连接持续时间内所产生的所有报文段都从网络中消息。这样就可以下一次建立新的TCP连接中，不会出现旧的报文段</font></strong></li>
+</ul>
+<h4 id="保活计时器的作用"><a href="#保活计时器的作用" class="headerlink" title="保活计时器的作用"></a><strong><font color='red'>保活计时器的作用</font></strong></h4><p><img src="/%5Cpic%5C%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C.assets%5C1711268037619.png" alt="1711268037619"></p>
+<h1 id="9、TCP报文段的首部格式"><a href="#9、TCP报文段的首部格式" class="headerlink" title="9、TCP报文段的首部格式"></a>9、TCP报文段的首部格式</h1><p><img src="/%5Cpic%5C%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C.assets%5C1711268419708.png" alt="1711268419708"></p>
+<p><img src="/%5Cpic%5C%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C.assets%5C1711268487944.png" alt="1711268487944"></p>
+<p><img src="/%5Cpic%5C%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C.assets%5C1711268496509.png" alt="1711268496509"></p>
+<p><img src="/%5Cpic%5C%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C.assets%5C1711268870056.png" alt="1711268870056"></p>
+<p><img src="/%5Cpic%5C%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C.assets%5C1711268925565.png" alt="1711268925565"></p>
+<p><img src="/%5Cpic%5C%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C.assets%5C1711269056861.png" alt="1711269056861"></p>
+<p><img src="/%5Cpic%5C%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C.assets%5C1711269313163.png" alt="1711269313163"></p>
+<p><img src="/%5Cpic%5C%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C.assets%5C1711269391733.png" alt="1711269391733"></p>
+<p><img src="/%5Cpic%5C%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C.assets%5C1711269516459.png" alt="1711269516459"></p>
+<p><img src="/%5Cpic%5C%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C.assets%5C1711269938752.png" alt="1711269938752"></p>
+<p><img src="/%5Cpic%5C%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C.assets%5C1711269948260.png" alt="1711269948260"></p>
+<p><img src="/%5Cpic%5C%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C.assets%5C1711269979046.png" alt="1711269979046"></p>
+<p><img src="/%5Cpic%5C%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C.assets%5C1711270012985.png" alt="1711270012985"></p>
+<p><img src="/%5Cpic%5C%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C.assets%5C1711270110170.png" alt="1711270110170"></p>
+<p><img src="/%5Cpic%5C%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C.assets%5C1711270196040.png" alt="1711270196040"></p>
+<p><img src="/%5Cpic%5C%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C.assets%5C1711270220797.png" alt="1711270220797"></p>
+<h1 id="10、应用层"><a href="#10、应用层" class="headerlink" title="10、应用层"></a>10、应用层</h1><p><img src="/%5Cpic%5C%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C.assets%5C1711270411939.png" alt="1711270411939"></p>
+<p><img src="/%5Cpic%5C%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C.assets%5C1711270661235.png" alt="1711270661235"></p>
+<h1 id="11、客户-服务器方式（C-S）和对等方式（P2P）"><a href="#11、客户-服务器方式（C-S）和对等方式（P2P）" class="headerlink" title="11、客户&#x2F;服务器方式（C&#x2F;S）和对等方式（P2P）"></a>11、客户&#x2F;服务器方式（C&#x2F;S）和对等方式（P2P）</h1><p><img src="/%5Cpic%5C%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C.assets%5C1711270764974.png" alt="1711270764974"></p>
+<p><img src="/%5Cpic%5C%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C.assets%5C1711270870642.png" alt="1711270870642"></p>
+<p><img src="/%5Cpic%5C%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C.assets%5C1711270957330.png" alt="1711270957330"></p>
+<h1 id="12、动态主机配置协议（HDCP）"><a href="#12、动态主机配置协议（HDCP）" class="headerlink" title="12、动态主机配置协议（HDCP）"></a>12、动态主机配置协议（HDCP）</h1><p><img src="/%5Cpic%5C%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C.assets%5C1711271099163.png" alt="1711271099163"></p>
+<p><img src="/%5Cpic%5C%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C.assets%5C1711276367292.png" alt="1711276367292"></p>
+<ul>
+<li><p><strong><font color='red'>工作过程</font></strong></p>
+</li>
+<li><p><strong><font color='red'>总</font></strong></p>
+</li>
+</ul>
+<p><img src="/%5Cpic%5C%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C.assets%5C1711277723294.png" alt="1711277723294"></p>
+<ul>
+<li><strong><font color='red'>分</font></strong></li>
+</ul>
+<p><img src="/%5Cpic%5C%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C.assets%5C1711277260140.png" alt="1711277260140"></p>
+<p><img src="/%5Cpic%5C%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C.assets%5C1711277507662.png" alt="1711277507662"></p>
+<p><img src="/%5Cpic%5C%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C.assets%5C1711277488675.png" alt="1711277488675"></p>
+<p><img src="/%5Cpic%5C%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C.assets%5C1711277548870.png" alt="1711277548870"></p>
+<h4 id="DHCP中继代理"><a href="#DHCP中继代理" class="headerlink" title="DHCP中继代理"></a><font color='red'>DHCP中继代理</font></h4><ul>
+<li><strong><font color='red'>正常</font></strong></li>
+</ul>
+<p><img src="/%5Cpic%5C%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C.assets%5C1711277878692.png" alt="1711277878692"></p>
+<ul>
+<li><strong><font color='red'>解决</font></strong></li>
+</ul>
+<p><img src="/%5Cpic%5C%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C.assets%5C1711277915816.png" alt="1711277915816"></p>
+<h1 id="13、DNS"><a href="#13、DNS" class="headerlink" title="13、DNS"></a>13、DNS</h1><ol>
+<li>在自己的DNS高速缓存中查找该域名所对应的IP地址</li>
+<li>若未找到，则会向网络中的某台DNS服务器查询（DNS服务器中有域名和IP地址映射关系的数据库）</li>
+</ol>
+<p><img src="/%5Cpic%5C%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C.assets%5C1711280303071.png" alt="1711280303071"></p>
+<p><img src="/%5Cpic%5C%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C.assets%5C1711280432679.png" alt="1711280432679"></p>
+<p><img src="/%5Cpic%5C%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C.assets%5C1711280599500.png" alt="1711280599500"></p>
+<p><img src="/%5Cpic%5C%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C.assets%5C1711280707212.png" alt="1711280707212"></p>
+<h4 id="域名服务器分类"><a href="#域名服务器分类" class="headerlink" title="域名服务器分类"></a><font color='red'>域名服务器分类</font></h4><p><img src="/%5Cpic%5C%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C.assets%5C1711280888316.png" alt="1711280888316"></p>
+<p><strong>权限域名服务器不是一个服务器，与域名的层次结构有关</strong></p>
+<h4 id="域名解析过程"><a href="#域名解析过程" class="headerlink" title="域名解析过程"></a><font color='red'>域名解析过程</font></h4><p><img src="/%5Cpic%5C%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C.assets%5C1711281118142.png" alt="1711281118142"></p>
+<p><img src="/%5Cpic%5C%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C.assets%5C1711281269193.png" alt="1711281269193"></p>
+<p><img src="/%5Cpic%5C%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C.assets%5C1711281323424.png" alt="1711281323424"></p>
+<p><img src="/%5Cpic%5C%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C.assets%5C1711281628984.png" alt="1711281628984"></p>
+<h1 id="14、文件传送协议FTP"><a href="#14、文件传送协议FTP" class="headerlink" title="14、文件传送协议FTP"></a>14、文件传送协议FTP</h1><p><img src="/%5Cpic%5C%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C.assets%5C1711281908898.png" alt="1711281908898"></p>
+<p><img src="/%5Cpic%5C%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C.assets%5C1711282077730.png" alt="1711282077730"></p>
+<h4 id="工作原理"><a href="#工作原理" class="headerlink" title="工作原理"></a><font color='red'>工作原理</font></h4><p><img src="/%5Cpic%5C%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C.assets%5C1711282172445.png" alt="1711282172445"></p>
+<p><img src="/%5Cpic%5C%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C.assets%5C1711282257950.png" alt="1711282257950"></p>
+<h1 id="15、电子邮件"><a href="#15、电子邮件" class="headerlink" title="15、电子邮件"></a>15、电子邮件</h1><p><img src="/%5Cpic%5C%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C.assets%5C1711282433513.png" alt="1711282433513"></p>
+<p><img src="/%5Cpic%5C%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C.assets%5C1711282534642.png" alt="1711282534642"></p>
+<p><img src="/%5Cpic%5C%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C.assets%5C1711282734037.png" alt="1711282734037"></p>
+<h4 id="邮件传送协议SMTP"><a href="#邮件传送协议SMTP" class="headerlink" title="邮件传送协议SMTP"></a><font color='red'>邮件传送协议SMTP</font></h4><p><img src="/%5Cpic%5C%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C.assets%5C1711282902799.png" alt="1711282902799"></p>
+<p><img src="/%5Cpic%5C%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C.assets%5C1711283035025.png" alt="1711283035025"></p>
+<p><img src="/%5Cpic%5C%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C.assets%5C1711283160282.png" alt="1711283160282"></p>
+<p><img src="/%5Cpic%5C%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C.assets%5C1711283203007.png" alt="1711283203007"></p>
+<h4 id="邮件读取协议"><a href="#邮件读取协议" class="headerlink" title="邮件读取协议"></a><font color='red'>邮件读取协议</font></h4><p><img src="/%5Cpic%5C%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C.assets%5C1711283328510.png" alt="1711283328510"></p>
+<h4 id="基于万维网的电子邮件"><a href="#基于万维网的电子邮件" class="headerlink" title="基于万维网的电子邮件"></a><font color='red'>基于万维网的电子邮件</font></h4><p><img src="/%5Cpic%5C%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C.assets%5C1711283445919.png" alt="1711283445919"></p>
+<h1 id="16、万维网"><a href="#16、万维网" class="headerlink" title="16、万维网"></a>16、万维网</h1><p><img src="/%5Cpic%5C%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C.assets%5C1711283612443.png" alt="1711283612443"></p>
+<p><img src="/%5Cpic%5C%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C.assets%5C1711283731214.png" alt="1711283731214"></p>
+<p><img src="/%5Cpic%5C%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C.assets%5C1711283789472.png" alt="1711283789472"></p>
+<h4 id="HTTP"><a href="#HTTP" class="headerlink" title="HTTP"></a><font color='red'>HTTP</font></h4><p><img src="/%5Cpic%5C%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C.assets%5C1711284007809.png" alt="1711284007809"></p>
+<p><img src="/%5Cpic%5C%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C.assets%5C1711284213033.png" alt="1711284213033"></p>
+<p><img src="/%5Cpic%5C%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C.assets%5C1711284321181.png" alt="1711284321181"></p>
+<p><img src="/%5Cpic%5C%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C.assets%5C1711284572198.png" alt="1711284572198"></p>
+<p><img src="/%5Cpic%5C%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C.assets%5C1711284698708.png" alt="1711284698708"></p>
+<p><img src="/%5Cpic%5C%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C.assets%5C1711284740885.png" alt="1711284740885"></p>
+<p><img src="/%5Cpic%5C%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C.assets%5C1711284886670.png" alt="1711284886670"></p>
+<p><img src="/%5Cpic%5C%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C.assets%5C1711284983449.png" alt="1711284983449"></p>
+<p><img src="/%5Cpic%5C%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C.assets%5C1711285111426.png" alt="1711285111426"></p>
+<h4 id="防止出现文档不一致"><a href="#防止出现文档不一致" class="headerlink" title="防止出现文档不一致"></a><font color='red'>防止出现文档不一致</font></h4><p><strong><font color='red'>原始服务器通常会给每个响应的对象设定一个修改时间字段和一个有效日期字段</font></strong></p>
+<p><img src="/%5Cpic%5C%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C.assets%5C1711286237003.png" alt="1711286237003"></p>
+<p><img src="/%5Cpic%5C%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C.assets%5C1711286395313.png" alt="1711286395313"></p>
+<p><img src="/%5Cpic%5C%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C.assets%5C1711286415363.png" alt="1711286415363"></p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>Author: </span><span class="post-copyright-info"><a href="http://example.com">Mq-Lv</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>Link: </span><span class="post-copyright-info"><a href="http://example.com/2024/03/24/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C-%E8%BF%90%E8%BE%93%E5%B1%82/">http://example.com/2024/03/24/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C-%E8%BF%90%E8%BE%93%E5%B1%82/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>Copyright Notice: </span><span class="post-copyright-info">All articles in this blog are licensed under <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> unless stating additionally.</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/">计算机网络</a></div><div class="post_share"><div class="social-share" data-image="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.3/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.3/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2024/03/24/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C-%E7%BD%91%E7%BB%9C%E5%B1%82/" title="计算机网络-网际层"><div class="cover" style="background: var(--default-bg-color)"></div><div class="pagination-info"><div class="label">Previous</div><div class="prev_info">计算机网络-网际层</div></div></a></div><div class="next-post pull-right"><a href="/2024/03/24/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/" title="计算机网络-概述-物理-数据链路层"><div class="cover" style="background: var(--default-bg-color)"></div><div class="pagination-info"><div class="label">Next</div><div class="next_info">计算机网络-概述-物理-数据链路层</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>Related Articles</span></div><div class="relatedPosts-list"><div><a href="/2024/03/24/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C-%E7%BD%91%E7%BB%9C%E5%B1%82/" title="计算机网络-网际层"><div class="cover" style="background: var(--default-bg-color)"></div><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2024-03-24</div><div class="title">计算机网络-网际层</div></div></a></div><div><a href="/2024/03/24/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/" title="计算机网络-概述-物理-数据链路层"><div class="cover" style="background: var(--default-bg-color)"></div><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2024-03-24</div><div class="title">计算机网络-概述-物理-数据链路层</div></div></a></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">Mq-Lv</div><div class="author-info__description">日常学习博客</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">17</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">5</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">5</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/Mq-Lv"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>Announcement</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>Contents</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#1%E3%80%81%E8%BF%90%E8%BE%93%E5%B1%82%E6%A6%82%E8%BF%B0"><span class="toc-number">1.</span> <span class="toc-text">1、运输层概述</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2%E3%80%81%E7%AB%AF%E5%8F%A3%E5%8F%B7"><span class="toc-number">2.</span> <span class="toc-text">2、端口号</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#3%E3%80%81TCP%E5%92%8CUDP%E7%9A%84%E5%AF%B9%E6%AF%94"><span class="toc-number">3.</span> <span class="toc-text">3、TCP和UDP的对比</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#4%E3%80%81TCP%E7%9A%84%E6%B5%81%E9%87%8F%E6%8E%A7%E5%88%B6"><span class="toc-number">4.</span> <span class="toc-text">4、TCP的流量控制</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#5%E3%80%81TCP%E7%9A%84%E6%8B%A5%E5%A1%9E%E6%8E%A7%E5%88%B6"><span class="toc-number">5.</span> <span class="toc-text">5、TCP的拥塞控制</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#6%E3%80%81TCP%E8%B6%85%E6%97%B6%E9%87%8D%E4%BC%A0%E6%97%B6%E9%97%B4%E7%9A%84%E9%80%89%E6%8B%A9"><span class="toc-number">6.</span> <span class="toc-text">6、TCP超时重传时间的选择</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#7%E3%80%81TCP%E5%8F%AF%E9%9D%A0%E4%BC%A0%E8%BE%93%E7%9A%84%E5%AE%9E%E7%8E%B0"><span class="toc-number">7.</span> <span class="toc-text">7、TCP可靠传输的实现</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#8%E3%80%81TCP%E8%BF%90%E8%BE%93%E8%BF%9E%E6%8E%A5%E7%AE%A1%E7%90%86"><span class="toc-number">8.</span> <span class="toc-text">8、TCP运输连接管理</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#8-1%E3%80%81%E4%B8%89%E6%AC%A1%E6%8F%A1%E6%89%8B"><span class="toc-number">8.1.</span> <span class="toc-text">8.1、三次握手</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%B8%BA%E4%BB%80%E4%B9%88%E4%B8%8D%E8%83%BD%E6%98%AF2%E6%AC%A1%E6%8F%A1%E6%89%8B%EF%BC%9F"><span class="toc-number">8.1.0.1.</span> <span class="toc-text">为什么不能是2次握手？</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#8-2%E3%80%81%E5%9B%9B%E6%8A%A5%E6%96%87%E6%8C%A5%E6%89%8B"><span class="toc-number">8.2.</span> <span class="toc-text">8.2、四报文挥手</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%9C%80%E5%90%8E%E7%AD%89%E5%BE%85%E4%B8%A4%E4%B8%AA%E6%9C%80%E9%95%BF%E6%8A%A5%E6%96%87%E6%AE%B5%E5%AF%BF%E5%91%BD%E7%9A%84%E5%8E%9F%E5%9B%A0"><span class="toc-number">8.2.0.1.</span> <span class="toc-text">最后等待两个最长报文段寿命的原因</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BF%9D%E6%B4%BB%E8%AE%A1%E6%97%B6%E5%99%A8%E7%9A%84%E4%BD%9C%E7%94%A8"><span class="toc-number">8.2.0.2.</span> <span class="toc-text">保活计时器的作用</span></a></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#9%E3%80%81TCP%E6%8A%A5%E6%96%87%E6%AE%B5%E7%9A%84%E9%A6%96%E9%83%A8%E6%A0%BC%E5%BC%8F"><span class="toc-number">9.</span> <span class="toc-text">9、TCP报文段的首部格式</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#10%E3%80%81%E5%BA%94%E7%94%A8%E5%B1%82"><span class="toc-number">10.</span> <span class="toc-text">10、应用层</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#11%E3%80%81%E5%AE%A2%E6%88%B7-%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%96%B9%E5%BC%8F%EF%BC%88C-S%EF%BC%89%E5%92%8C%E5%AF%B9%E7%AD%89%E6%96%B9%E5%BC%8F%EF%BC%88P2P%EF%BC%89"><span class="toc-number">11.</span> <span class="toc-text">11、客户&#x2F;服务器方式（C&#x2F;S）和对等方式（P2P）</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#12%E3%80%81%E5%8A%A8%E6%80%81%E4%B8%BB%E6%9C%BA%E9%85%8D%E7%BD%AE%E5%8D%8F%E8%AE%AE%EF%BC%88HDCP%EF%BC%89"><span class="toc-number">12.</span> <span class="toc-text">12、动态主机配置协议（HDCP）</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#DHCP%E4%B8%AD%E7%BB%A7%E4%BB%A3%E7%90%86"><span class="toc-number">12.0.0.1.</span> <span class="toc-text">DHCP中继代理</span></a></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#13%E3%80%81DNS"><span class="toc-number">13.</span> <span class="toc-text">13、DNS</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%9F%9F%E5%90%8D%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%88%86%E7%B1%BB"><span class="toc-number">13.0.0.1.</span> <span class="toc-text">域名服务器分类</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%9F%9F%E5%90%8D%E8%A7%A3%E6%9E%90%E8%BF%87%E7%A8%8B"><span class="toc-number">13.0.0.2.</span> <span class="toc-text">域名解析过程</span></a></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#14%E3%80%81%E6%96%87%E4%BB%B6%E4%BC%A0%E9%80%81%E5%8D%8F%E8%AE%AEFTP"><span class="toc-number">14.</span> <span class="toc-text">14、文件传送协议FTP</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%B7%A5%E4%BD%9C%E5%8E%9F%E7%90%86"><span class="toc-number">14.0.0.1.</span> <span class="toc-text">工作原理</span></a></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#15%E3%80%81%E7%94%B5%E5%AD%90%E9%82%AE%E4%BB%B6"><span class="toc-number">15.</span> <span class="toc-text">15、电子邮件</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%82%AE%E4%BB%B6%E4%BC%A0%E9%80%81%E5%8D%8F%E8%AE%AESMTP"><span class="toc-number">15.0.0.1.</span> <span class="toc-text">邮件传送协议SMTP</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%82%AE%E4%BB%B6%E8%AF%BB%E5%8F%96%E5%8D%8F%E8%AE%AE"><span class="toc-number">15.0.0.2.</span> <span class="toc-text">邮件读取协议</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%9F%BA%E4%BA%8E%E4%B8%87%E7%BB%B4%E7%BD%91%E7%9A%84%E7%94%B5%E5%AD%90%E9%82%AE%E4%BB%B6"><span class="toc-number">15.0.0.3.</span> <span class="toc-text">基于万维网的电子邮件</span></a></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#16%E3%80%81%E4%B8%87%E7%BB%B4%E7%BD%91"><span class="toc-number">16.</span> <span class="toc-text">16、万维网</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#HTTP"><span class="toc-number">16.0.0.1.</span> <span class="toc-text">HTTP</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%98%B2%E6%AD%A2%E5%87%BA%E7%8E%B0%E6%96%87%E6%A1%A3%E4%B8%8D%E4%B8%80%E8%87%B4"><span class="toc-number">16.0.0.2.</span> <span class="toc-text">防止出现文档不一致</span></a></li></ol></li></ol></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Post</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/03/24/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C-%E7%BD%91%E7%BB%9C%E5%B1%82/" title="计算机网络-网际层">计算机网络-网际层</a><time datetime="2024-03-24T13:47:23.212Z" title="Created 2024-03-24 21:47:23">2024-03-24</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/03/24/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C-%E8%BF%90%E8%BE%93%E5%B1%82/" title="计算机网络-运输层-应用层">计算机网络-运输层-应用层</a><time datetime="2024-03-24T13:47:23.210Z" title="Created 2024-03-24 21:47:23">2024-03-24</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/03/24/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/" title="计算机网络-概述-物理-数据链路层">计算机网络-概述-物理-数据链路层</a><time datetime="2024-03-24T13:47:23.210Z" title="Created 2024-03-24 21:47:23">2024-03-24</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/03/06/3_%E5%93%88%E5%B8%8C%E8%A1%A8/" title="算法刷题—哈希表">算法刷题—哈希表</a><time datetime="2024-03-06T05:29:17.518Z" title="Created 2024-03-06 13:29:17">2024-03-06</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/03/06/%E6%80%BB%E7%AC%94%E8%AE%B0/" title="算法刷题—总笔记">算法刷题—总笔记</a><time datetime="2024-03-06T05:29:17.518Z" title="Created 2024-03-06 13:29:17">2024-03-06</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2024 By Mq-Lv</div><div class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="Read Mode"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="Toggle Between Light And Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle between Single-column and Double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="Setting"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="Table Of Contents"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="Back To Top"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=4.13.0"></script><script src="/js/main.js?v=4.13.0"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.33/dist/fancybox/fancybox.umd.min.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
