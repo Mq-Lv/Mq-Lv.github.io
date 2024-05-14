@@ -5,10 +5,10 @@
 <meta property="og:site_name" content="Mq-Lv">
 <meta property="og:description" content="日常学习博客">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png">
+<meta property="og:image" content="http://example.com/img/favicon.png">
 <meta property="article:author" content="Mq-Lv">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://example.com/page/2/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css?v=4.13.0"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.1/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.33/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
+<meta name="twitter:image" content="http://example.com/img/favicon.png"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://example.com/page/2/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css?v=4.13.0"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.1/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.33/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
   root: '/',
   algolia: undefined,
   localSearch: undefined,
@@ -53,7 +53,7 @@
   isHome: true,
   isHighlightShrink: false,
   isToc: false,
-  postUpdate: '2024-03-25 19:51:25'
+  postUpdate: '2024-05-14 11:18:20'
 }</script><script>(win=>{
       win.saveToLocal = {
         set: (key, value, ttl) => {
@@ -150,121 +150,359 @@
         }
       }
       detectApple()
-    })(window)</script><meta name="generator" content="Hexo 7.1.1"></head><body><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">17</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">4</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">4</div></a></div><hr class="custom-hr"/></div></div><div class="page" id="body-wrap"><header class="full_page" id="page-header"><nav id="nav"><span id="blog-info"><a href="/" title="Mq-Lv"><span class="site-name">Mq-Lv</span></a></span><div id="menus"><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="site-info"><h1 id="site-title">Mq-Lv</h1></div><div id="scroll-down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout" id="content-inner"><div class="recent-posts" id="recent-posts"><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2024/03/06/MySQL%E7%B4%A2%E5%BC%95%E5%8F%8A%E8%B0%83%E4%BC%98%E7%AF%87/" title="MySQL高级篇-索引的数据结构">MySQL高级篇-索引的数据结构</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2024-03-06T04:37:30.703Z" title="Created 2024-03-06 12:37:30">2024-03-06</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/MySQL%E5%AD%A6%E4%B9%A0/">MySQL学习</a></span></div><div class="content">第06章_索引的数据结构1. 为什么使用索引索引是存储引擎用于快速找到数据记录的一种数据结构，就好比一本教科书的目录部分，通过目录中找到对应文章的页码，便可快速定位到需要的文章。MySQL中也是一样的道理，进行数据查找时，首先查看查询条件是否命中某条索引，符合则通过索引查找相关数据，如果不符合则需要全表扫描，即需要一条一条地查找记录，直到找到与条件符合的记录。
+    })(window)</script><meta name="generator" content="Hexo 7.1.1"></head><body><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/img/favicon.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">30</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">10</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">10</div></a></div><hr class="custom-hr"/></div></div><div class="page" id="body-wrap"><header class="full_page" id="page-header"><nav id="nav"><span id="blog-info"><a href="/" title="Mq-Lv"><span class="site-name">Mq-Lv</span></a></span><div id="menus"><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="site-info"><h1 id="site-title">Mq-Lv</h1></div><div id="scroll-down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout" id="content-inner"><div class="recent-posts" id="recent-posts"><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2024/05/14/JVM-%E7%B1%BB%E5%8A%A0%E8%BD%BD%E7%AF%87/" title="JVM-类加载篇">JVM-类加载篇</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2024-05-14T02:31:12.608Z" title="Created 2024-05-14 10:31:12">2024-05-14</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/JVM/">JVM</a></span></div><div class="content">资源来源：尚硅谷JVM精讲与GC调优教程（宋红康主讲，含jvm面试真题）_哔哩哔哩_bilibili
+</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2024/05/14/JDBC/" title="JDBC">JDBC</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2024-05-14T02:23:19.525Z" title="Created 2024-05-14 10:23:19">2024-05-14</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/JDBC/">JDBC</a></span></div><div class="content">全新JDBC技术概念jdbc技术概念和理解
+jdbc技术理解
+ppt展地的PPT里面）
 
-如上图所示，数据库没有索引的情况下，数据分布在硬盘不同的位置上面，读取数据时，摆臂需要前后摆动查询数据，这样操作非常消耗时间。如果数据顺序摆放，那么也需要从1到6行按顺序读取，这样就相当于进行了6次IO操作，依旧非常耗时。如果我们不借助任何索引结构帮助我们快速定位数据的话，我们查找 Col 2 &#x3D; 89 这条记录，就要逐行去查找、去比较。从Col 2 &#x3D; 34 开始，进行比较，发现不是，继续下一行。我们当前的表只有不到10行数据，但如果表很大的话，有上千万条数据，就意味着要做很多很多次硬盘I/0才能找到。现在要查找 Col 2 &#x3D; 89 这条记录。CPU必须先去磁盘查找这条记录，找到之后加载到内存 ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2024/03/06/MySQL%E5%9F%BA%E7%A1%80%E7%AF%87/" title="MySQL基础篇">MySQL基础篇</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2024-03-06T01:28:00.049Z" title="Created 2024-03-06 09:28:00">2024-03-06</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/MySQL%E5%AD%A6%E4%B9%A0/">MySQL学习</a></span></div><div class="content">导入表的问题导入数据时外键约束问题
-数据导入指令：
-1source d:\xxx.sql
+jdbc概念总结
 
-通过FOREIGN_KEY_CHECKS解决，用法如下：
-12set FOREIGN_KEY_CHECKS=0;  #在导入前设置为不检查外键约束set FOREIGN_KEY_CHECKS=1;  #在导入后恢复检查外键约束
-
-第三章_最基本的SELECT语句1. SQL语言的规则和规范1) 基本规则
-SQL 可以写在一行或者多行。为了提高可读性，各子句分行写，必要时使用缩进 
-每条命令以 ; 或 \g 或 \G 结束 
-关键字不能被缩写也不能分行 
-关于标点符号 
-必须保证所有的()、单引号、双引号是成对结束的 
-必须使用英文状态下的半角输入方式 
-字符串型和日期时间类型的数据可以使用单引号（’ ‘）表示 
-列的别名，尽量使用双引号（” “），而且不建议省略as
-
-
-
-2) SQL大小写规范（建议遵守）
-MySQL 在 Windows 环境下是大小写不敏感的 
-MySQL 在 Linux 环境下是大小写敏感的 
-数据库名、表名、表的别名、变量名是严格区分大小写的 
-关键字、函数名、列名(或字 ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2024/03/05/%E8%87%AA%E6%88%91%E8%AF%84%E4%BB%B7%E5%86%99%E6%B3%95/" title="自我评价写法">自我评价写法</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2024-03-05T15:10:11.586Z" title="Created 2024-03-05 23:10:11">2024-03-05</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E6%89%BE%E5%B7%A5%E4%BD%9C/">找工作</a></span></div><div class="content">一般来说 「自我评价」都是写在简历最后面，如果学历不高，可以在「自我评价」上好好下功夫把「自我评价」放在最前面。
-很多录友写「自我评价」是这样的：
-
-有较强的适应能力、学习能力、抗压能力、自我管理能力。工作 态度认真负责，具有良好的团队合作精神，生活态度乐观开朗， 积极向上。爱好跑步、爬山、钓鱼、羽毛球等。喜欢做有挑战的 事，遇强则强，压力越大，激发的能力越大
-
-或者是这样的：
-
-具有较强的学习能力，善于发现和思考问题，对工作认真严谨；乐观向上，具有团队协作能力。
-
-总之就是写了，和没写区别不大。 
-我给大家列几个点，可以从信息检索能力，动手能力，解决问题能力 等这几方面来说，例如这样：
-
-有较强的信息检索能力，擅长坚决疑难杂症，通过Google&#x2F;Github&#x2F;StackOverflow等国外论坛&#x2F;文档解决技术问题。 
-
-动手能力强，有探索精神，拆过路由器，笔记本，组装过PC，很早就用过XXC，最早的一批XXX用户。尝试使用各个云服务的产品，对象存储，云服务器，CDN 等等。 
-
-在开发中对待问题具有认真求索的精神，能够在短时间内解决问题并理解知识点。并且 ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2024/03/05/%E9%A1%B9%E7%9B%AE%E7%BB%8F%E5%8E%86%E5%86%99%E6%B3%95/" title="项目经历写法">项目经历写法</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2024-03-05T15:10:11.585Z" title="Created 2024-03-05 23:10:11">2024-03-05</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E6%89%BE%E5%B7%A5%E4%BD%9C/">找工作</a></span></div><div class="content">本文我给出，C++和java 以及前端项目的具体写法，其他语言的话，也可以参考： 
-看了一位录友的简历。
-【项目经验】都堆在一起了。  
-
-建议【项目经验】分 「项目描述」「个人工作」「个人收获」这三块来写，不要堆在一起。例如这样：
-
-或者在写一写「项目难点」例如这样：
-
-至于「技术栈」可写可不写。例如有的同学在【项目经验】中把技术栈都写出来了，例如这样：
-
-这样写的好处是让面试官快速了解，你这个项目的技术栈。缺点是列出一大堆技术，怕面试官详选一个细问起来，自己在回答不上来。
-不写 「技术栈」的话就在 「个人收获」 写一写自己使用某一技术的心得，这样把面试问题缩小到自己可以把控的点上。 
-例如这样：
-
-前端项目写法：
-  
-
-转载：知识星球
-</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2024/03/05/%E5%AE%9E%E4%B9%A0%E7%BB%8F%E5%8E%86%E5%86%99%E6%B3%95/" title="实习经历写法">实习经历写法</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2024-03-05T15:10:11.572Z" title="Created 2024-03-05 23:10:11">2024-03-05</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E6%89%BE%E5%B7%A5%E4%BD%9C/">找工作</a></span></div><div class="content">实习都做了什么。实习中遇到了哪些问题（技术上，开发流程上，部门沟通上）。你是如何解决这些问题的。实习中收获了什么技术上成长 （学习了哪些技术组件，自己有没有去深挖）代码风格上  （如何写出易于维护的代码）开发流程上 （单元检测，打日志，Git团队合作）对业务理解能力上 （如果把业务场景转为系统设计转为工程代码，都考虑了哪些问题）也可以适当把同事工作的内容写自己简历上，但前提是自己一定要研究清楚，否则就是给自己挖坑「实习收获」模板写法：（不建议原封不动的抄，很容易重复） ，建议根据自己的实习内容，学到的具体技术来写。模板写法一：对团队开发的流程有了更加深刻的理解，提升了自身的技术水平，学会了技术文档的编写，锻炼了开发的思维，更加注重程序的可维护性、模块化和可读性，是自己明白了快速学习新知识并将其运动到业务的重要性。模板写法二：熟悉了企业项目的开发流程，提升了个人能力，其中包括但不仅限于:快速接受新事物代码规范、良好的开发习惯(如先画整体架构图)、团队协作(如及时沟通)、问题的快速定位等。
-
-转载：知识星球
-</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2024/03/05/%E7%AE%80%E5%8E%86%E4%B8%AD%E4%B8%93%E4%B8%9A%E6%8A%80%E8%83%BD%E7%9A%84%E5%86%99%E6%B3%95/" title="简历中专业技能的写法">简历中专业技能的写法</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2024-03-05T15:10:11.570Z" title="Created 2024-03-05 23:10:11">2024-03-05</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E6%89%BE%E5%B7%A5%E4%BD%9C/">找工作</a></span></div><div class="content">很多同学【专业技能】这块写的很少，其实不是掌握的少，而是没有表达出来。
-例如有的同学这么写：
-
-
-
-
-这些【专业技能】都写的很少，其实是可以在丰富一些的。
-我来给大家拓展一下、
-
-熟练C++，（列举C++的若干知识点），了解 Java，python，go （适当补充对这些语言的理解）
-熟悉常见设计模式（例句一些设计模式）
-熟悉linux操作系统vim开发环境，（列举网络编程相关知识，例如epoll，socket等等）
-熟悉网络，（列举网络协议相关考点，tcp&#x2F;ip,http, https, 三次，四次握手，流量控制等等）
-数量掌握数据结构与算法（列举常用算法，最好搞透一个算法，说对该算法有独到见解）
-数量使用Git，等版本控制 
-以上为公共写法，下面可以在补充自己的其他领域的内容
-
-针对以上这个模板， 再来补充相关内容： （可以缩小面试官提问范围，把问题具体一点，你也可以有针对性的准备）
-
-熟悉C&#x2F;C++，熟练使用C的指针应用及内存管理，C++的封装继承多态，STL常用容器，C++11常用特性(智能指针等) ，了解 Python，Gtest等。
-熟悉常用设计模式(单 ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2024/03/05/%E5%B0%9A%E7%A1%85%E8%B0%B7_%E5%AE%8B%E7%BA%A2%E5%BA%B7_%E7%AC%AC01%E7%AB%A0_Java%E8%AF%AD%E8%A8%80%E6%A6%82%E8%BF%B0/" title="java">java</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2024-03-05T13:55:29.627Z" title="Created 2024-03-05 21:55:29">2024-03-05</time></span></div><div class="content">第01章_Java语言概述讲师：尚硅谷-宋红康（江湖人称：康师傅）
-官网：http://www.atguigu.com
-
-1. Java知识脉络图1.1 Java基础全程脉络图
-1.2 本章专题与脉络
-
-2. 抽丝剥茧话Java2.1 当前大学生就业形势
-麦可思研究院发布了《2022年中国大学生就业报告》，针对2021届毕业生收入较高的本科专业排行榜：
-
-
-
-
-麦可思研究院发布过《2021年中国大学生就业报告》，应届本科毕业生就业数量较大的前十位行业类的就业质量：
-
-
-报告还对毕业三年后的2017届毕业生所在十大行业进行了统计：
+jdbc是(Java Database Connectivity)单词的缩写,翻译为java连接数据库
+jdbc是java程序连接数据库的技术统称
+jdbc由java语言的规范(接口)和各个数据库厂商的实现驱动(jar)组成
+*jdbc是一种典型的**面向接口编程*
+jdbc优势 
+只需要学习jdbc规范接口的方法,即可操作所有的数据库软件
+项目中期切换数据库软件,只需要更换对应的数据库驱动jar包,不需要更码
 
 
 
 
 
-从国家统计局发布的2021年全国平均工资来看，不管在城镇非私营单位还是私营单位，IT业均为最高。
+jdbc核心api和使用路线
+jdbc技术组成
 
-2.2 IT互联网是否依旧靠谱过去不能代表未来！互联网是否依旧靠谱？！
+jdk下jdbc规范接口, 存储在java.sql和javax.sql包中的api
+
+为了项目代码的可移植性，可维护性，SUN公司从最初就制定了Java程序连接各种数据库的统一接口规范。这样的话，不管是连接哪一种DBMS软件，Java代码可以保持一致性。
+
+
+各个数据库厂商提供的驱动jar包
+
+因为各个数据库厂商的DBMS软件各有不同，那么内部如何通过sql实现增、删、改、查等管理数据，只有这个数据库厂商自己更 ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2024/05/13/JVM-%E5%AD%97%E8%8A%82%E7%A0%81%E7%AF%87/" title="JVM-字节码篇">JVM-字节码篇</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2024-05-13T14:12:58.103Z" title="Created 2024-05-13 22:12:58">2024-05-13</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/JVM/">JVM</a></span></div><div class="content">资源来源：尚硅谷JVM精讲与GC调优教程（宋红康主讲，含jvm面试真题）_哔哩哔哩_bilibili
+</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2024/03/24/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C-%E7%BD%91%E7%BB%9C%E5%B1%82/" title="计算机网络-网际层">计算机网络-网际层</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2024-03-24T13:47:23.212Z" title="Created 2024-03-24 21:47:23">2024-03-24</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/">计算机网络</a></span></div><div class="content">1、网络层概述
 
 
 
-2014 年至 2018 年间，我国网民规模从 6.49 亿增长为 8.29 亿，增幅为 27.5%。同一时间段，全国移动互联网接入的流量却从 20.6EB 增长到了 711.1EB，增幅达 3352%（获取和处理的信息量大幅增加）。 
-随着 5G 技术进一步拓宽移动互联网的 ...</div></div></div><nav id="pagination"><div class="pagination"><a class="extend prev" rel="prev" href="/"><i class="fas fa-chevron-left fa-fw"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">Mq-Lv</div><div class="author-info__description">日常学习博客</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">17</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">4</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">4</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/Mq-Lv"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>Announcement</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Post</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/03/24/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C-%E7%BD%91%E7%BB%9C%E5%B1%82/" title="计算机网络-网际层">计算机网络-网际层</a><time datetime="2024-03-24T13:47:23.212Z" title="Created 2024-03-24 21:47:23">2024-03-24</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/03/24/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C-%E8%BF%90%E8%BE%93%E5%B1%82/" title="计算机网络-运输层-应用层">计算机网络-运输层-应用层</a><time datetime="2024-03-24T13:47:23.210Z" title="Created 2024-03-24 21:47:23">2024-03-24</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/03/24/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/" title="计算机网络-概述-物理-数据链路层">计算机网络-概述-物理-数据链路层</a><time datetime="2024-03-24T13:47:23.210Z" title="Created 2024-03-24 21:47:23">2024-03-24</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/03/06/3_%E5%93%88%E5%B8%8C%E8%A1%A8/" title="算法刷题—哈希表">算法刷题—哈希表</a><time datetime="2024-03-06T05:29:17.518Z" title="Created 2024-03-06 13:29:17">2024-03-06</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/03/06/%E6%80%BB%E7%AC%94%E8%AE%B0/" title="算法刷题—总笔记">算法刷题—总笔记</a><time datetime="2024-03-06T05:29:17.518Z" title="Created 2024-03-06 13:29:17">2024-03-06</time></div></div></div></div><div class="card-widget card-categories"><div class="item-headline">
+
+2、IPv4地址概述
+2.1、分类编址的IPv4地址
+
+A类
+
+
+
+B类
+
+
+
+C类
+
+
+
+特殊
+
+
+
+
+2.2、划分子网的IPv4地址
+
+
+2.3、无分类编址的IPv4地址（CIDR）
+
+
+2.4、路由聚合
+2.5、IPv4地址的应用规划(FLSM、VLSM)
+
+
+
+
+3、IP数据报的发送和转发过程
+
+原主机如果要发送数据报到不同网络中，如何知道路由器在哪？
+
+
+
+路由器收到IP数据报如何转发？
+
+
+
+
+
+
+4、静态路由配置
+
+
+静态路由可能产生的路由环路问题
+1：配置错误
+
+
+
+​	2：聚合了不存在的网络
+
+
+
+3：网络故障
+
+
+
+5、路由选择协议
+
+
+
+IGP和EGP（也可称IRP和ERP）只是路由选择协议的分类名称，不是具体协议
+
+5.1、常见路由选择协议
+
+5.1.1、路由信息协议（RIP）
+
+
+更新规则
+
+坏消息穿的慢的问题
+
+
+
+
+5.1.2、开放最短路径优先（OSPF）
+
+
+协议号89是为了表明IP数据报的数据载荷是OSPF分组
+
+
+
+
+
+
+
+
+5.1.3、边界网关协议（BGP）
+
+
+
+
+5.2、路由器的基本结构
+
+
+6、IP数据报的首部格式
+
+ ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2024/03/24/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C-%E8%BF%90%E8%BE%93%E5%B1%82/" title="计算机网络-运输层-应用层">计算机网络-运输层-应用层</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2024-03-24T13:47:23.210Z" title="Created 2024-03-24 21:47:23">2024-03-24</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/">计算机网络</a></span></div><div class="content">1、运输层概述
+
+2、端口号
+
+
+3、TCP和UDP的对比
+
+
+
+
+
+4、TCP的流量控制
+
+
+
+
+即使接收窗口为0，TCP规定，接收端也必须能够接收零窗口探测报文段、确认报文段，以及携带有紧急数据的报文段。
+
+5、TCP的拥塞控制
+
+
+
+
+过程
+
+
+
+在TCP双发建立逻辑连接关系时，cwnd被设置为1
+发送方每收到一个对新报文段的确认时，就将拥塞窗口+1
+
+
+
+
+
+
+
+
+
+
+
+快重传
+
+
+
+
+
+6、TCP超时重传时间的选择
+
+
+
+
+
+7、TCP可靠传输的实现
+
+
+
+
+8、TCP运输连接管理
+8.1、三次握手
+
+SYN被设置为1的报文不能携带数据，但会消耗一个序号
+普通的TCP确认报文段可以携带数据，但如果不携带数据就不消耗序号
+FIN等于1的报文段即使不携带数据，也要消耗掉一个序号
+
+
+
+
+
+为什么不能是2次握手？
+8.2、四报文挥手
+最后等待两个最长报文段寿命的原因
+
+确保TCP服务进程可以收到最后一个确认报文段而进入关闭状态
+另外，等待两倍MSL时长，可以使本次连接持续时间内所产生的所有报文段都从网络中消息。这样就可以下一次建立新的TCP连接中，不会出现旧的报文段
+
+保活计时器的 ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2024/03/24/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/" title="计算机网络-概述-物理-数据链路层">计算机网络-概述-物理-数据链路层</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2024-03-24T13:47:23.210Z" title="Created 2024-03-24 21:47:23">2024-03-24</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/">计算机网络</a></span></div><div class="content">1、计算机网络概述1.1、网络、互联网和因特网
+1.2、因特网发展的三个阶段
+1.3、因特网服务提供者ISP（Internet service provider）
+
+
+2、交换方式
+
+
+
+
+3、计算机网络的分类
+4、计算机网络的性能指标
+
+
+
+
+处理时延 包含 排队时延
+
+
+
+
+
+
+
+5、计算机网络体系结构
+
+网络接口层并未规定具体的内容：为了连接各种网络接口
+
+
+
+
+5.1、分层的必要性
+
+
+
+说明：严格来说传输媒体不属于物理层（不包含在体系结构中）。计算机网络中传播的信号并不是举例的方波信号
+
+
+
+说明：总线形式已经淘汰，现在常用的是使用以太网交换机将多台主机互连形成的交换式网络
+
+
+
+
+5.2、传输过程举例
+实际的通信是两个进程之间的通信
+
+5.2.1、请求段的处理过程
+
+
+
+添加TCP首部的作用：区分应用进程并实现可靠传输
+
+
+
+添加IP首部：使IP数据报可以在互联网上传输（被路由器转发）
+
+
+
+上述是以太网帧：帧首部作用是为了让帧能够在一段链路上或一个网络上传输，能够被相应的目的主机接收。帧尾部的作用是让目的主机检查所接受到的帧是否有误码
+
+
+物理层转化为比特率，加入前导码， ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2024/03/06/3_%E5%93%88%E5%B8%8C%E8%A1%A8/" title="算法刷题—哈希表">算法刷题—哈希表</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2024-03-06T05:29:17.518Z" title="Created 2024-03-06 13:29:17">2024-03-06</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E7%AE%97%E6%B3%95/">算法</a></span></div><div class="content">3_哈希表总结：
+什么时候使用哈希法，当我们需要查询一个元素是否出现过，或者一个元素是否在集合里的时候，就要第一时间想到哈希法。
+
+
+当遇到要快速判断一个元素是否出现在集合里的时候，就要考虑哈希法！
+在做面试题目的时候遇到需要判断一个元素是否出现过的场景也应该第一时间想到哈希法！
+哈希法也是牺牲了空间换取了时间，因为我们要使用额外的数组，set或者是map来存放数据，才能实现快速的查找。
+当题目中数值的取值大小限制时，可以选用数组来做哈希题目
+当要求输出结果唯一，且不考虑输出结果的顺序时，使用集合set来做
+
+代码问题：
+字符串String中元素的个数使用函数length()获取
+数组中的长度是数组的属性，使用length获取
+string.charAt(i)可以获取string中特定位置的字符
+collection.add()添加元素；collection.remove()删除元素；collection.contains()元素包含问题；collection.size()包含元素的个数
+集合框架中的类型首字母都是大写
+value   map.getOrDefault(key,defa ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2024/03/06/%E6%80%BB%E7%AC%94%E8%AE%B0/" title="算法刷题—总笔记">算法刷题—总笔记</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2024-03-06T05:29:17.518Z" title="Created 2024-03-06 13:29:17">2024-03-06</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E7%AE%97%E6%B3%95/">算法</a></span></div><div class="content">
+第一遍主要关注于低中难度的题，不要纠结高难度的题目
+记录并抓住高频题，这是首先应该关注的。在这些高频题搞定后，在去看那些低频题。（不要上来就想面面俱到）
+对于经典类型的题，可以总结出其模板，以便于快速的写出其代码。
+看到一道题时：注意先使用注释去搭好框架；
+
+</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2024/03/06/1__%E6%95%B0%E7%BB%84/" title="算法刷题—数组">算法刷题—数组</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2024-03-06T05:29:17.506Z" title="Created 2024-03-06 13:29:17">2024-03-06</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E7%AE%97%E6%B3%95/">算法</a></span></div><div class="content">1__数组1、理论基础
+数组是存放在连续内存空间上的相同类型数据的集合。
+
+需要两点注意的是
+
+数组下标都是从0开始的。
+数组内存空间的地址是连续的
+
+
+二维数组在内存的空间地址是连续的么？
+在C++中二维数组是连续分布的。在Java中没有指针，同时也不对程序员暴露其元素的地址，寻址操作完全交给虚拟机。所以不好说。
+
+
+2、经典题目（模板总结）2.1、二分查找思路：
+
+定义上下界（注意上界为数组长度减1）（数组长度为.length）
+通过while循环，来更新上下界。（注意循环条件为上界&gt;=下界，而不是&gt;）
+更新上下界：计算中间索引mid，并根据中间索引值来判断索引的更新与返回。（注意更新时上界&#x3D;min-1，下界&#x3D;mid+1）
+如果未在循环中返回就返回-1.
+
+
+这里其实使用了双向指针
+注意“循环不变量原则”：即在每次循环中，边界的处理都要坚持统一的区间定义（左闭右闭即[left, right]，左闭右开即[left, right)，左开右闭即(left, right]）
+
+1234567891011121314151617181920class Sol ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2024/03/06/2_%E9%93%BE%E8%A1%A8/" title="算法刷题—链表">算法刷题—链表</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2024-03-06T05:29:17.506Z" title="Created 2024-03-06 13:29:17">2024-03-06</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E7%AE%97%E6%B3%95/">算法</a></span></div><div class="content">2_链表总结：
+链表类题目一般都有两种方法：
+直接使用原来的链表来进行操作
+设置一个虚拟头节点再进行操作
+
+
+注意双链表的使用
+一般将虚拟头节点作为cur，之后虚拟头节点不变，从而保证虚拟头节点.next即为要返回的head
+
+1、基础理论
+链表：通过指针串联起来的线性结构，每一个节点由两部分组成：数据+指针
+链表的入口节点称为链表的头节点（head）
+
+
+1.1、链表的类型
+单链表
+
+指针指向下一个节点，最后一个节点的指针为null
+
+双链表：每一个节点有两个指针域，一个指向上一个节点，一个指向下一个节点。即可以向前查询又可以向后查询
+
+
+循环链表：可以解决约瑟夫环问题
+
+
+
+1.2、链表的存储方式链表通过指针域的指针连接内存中的各个节点，所以在内存中不是连续分布的，而是散乱的分别在内存中的某地址上，分配机制取决于操作系统的内存管理
+1.3、链表的定义：以单链表为例：
+123456789101112131415161718public class ListNode &#123;    // 结点的值    int val;    // 下一个结点    ListNode next;  ...</div></div></div><nav id="pagination"><div class="pagination"><a class="extend prev" rel="prev" href="/"><i class="fas fa-chevron-left fa-fw"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/#content-inner">3</a><a class="extend next" rel="next" href="/page/3/#content-inner"><i class="fas fa-chevron-right fa-fw"></i></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/img/favicon.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">Mq-Lv</div><div class="author-info__description">日常学习博客</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">30</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">10</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">10</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/Mq-Lv"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>Announcement</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Post</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/05/14/Maven%E4%BE%9D%E8%B5%96%E7%AE%A1%E7%90%86%E9%A1%B9%E7%9B%AE%E6%9E%84%E5%BB%BA%E5%B7%A5%E5%85%B7/" title="Maven">Maven</a><time datetime="2024-05-14T02:47:00.361Z" title="Created 2024-05-14 10:47:00">2024-05-14</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/05/14/SSM/" title="SSM">SSM</a><time datetime="2024-05-14T02:44:38.213Z" title="Created 2024-05-14 10:44:38">2024-05-14</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/05/14/Redis/" title="Redis">Redis</a><time datetime="2024-05-14T02:41:22.464Z" title="Created 2024-05-14 10:41:22">2024-05-14</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/05/14/JUC/" title="JUC">JUC</a><time datetime="2024-05-14T02:36:44.061Z" title="Created 2024-05-14 10:36:44">2024-05-14</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/05/14/JVM-%E6%80%A7%E8%83%BD%E8%B0%83%E4%BC%98%E6%A1%88%E4%BE%8B%E7%AF%87/" title="JVM-性能调优案例篇">JVM-性能调优案例篇</a><time datetime="2024-05-14T02:34:38.750Z" title="Created 2024-05-14 10:34:38">2024-05-14</time></div></div></div></div><div class="card-widget card-categories"><div class="item-headline">
             <i class="fas fa-folder-open"></i>
             <span>Categories</span>
-            
+            <a class="card-more-btn" href="/categories/" title="View More">
+    <i class="fas fa-angle-right"></i></a>
             </div>
             <ul class="card-category-list" id="aside-cat-list">
-            <li class="card-category-list-item "><a class="card-category-list-link" href="/categories/MySQL%E5%AD%A6%E4%B9%A0/"><span class="card-category-list-name">MySQL学习</span><span class="card-category-list-count">5</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E6%89%BE%E5%B7%A5%E4%BD%9C/"><span class="card-category-list-name">找工作</span><span class="card-category-list-count">4</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E7%AE%97%E6%B3%95/"><span class="card-category-list-name">算法</span><span class="card-category-list-count">4</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/"><span class="card-category-list-name">计算机网络</span><span class="card-category-list-count">3</span></a></li>
-            </ul></div><div class="card-widget card-tags"><div class="item-headline"><i class="fas fa-tags"></i><span>Tags</span></div><div class="card-tag-cloud"><a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/" style="font-size: 1.1em; color: #999">计算机网络</a> <a href="/tags/%E7%AE%80%E5%8E%86/" style="font-size: 1.3em; color: #99a1ac">简历</a> <a href="/tags/%E7%AE%97%E6%B3%95/" style="font-size: 1.3em; color: #99a1ac">算法</a> <a href="/tags/MySQL/" style="font-size: 1.5em; color: #99a9bf">MySQL</a></div></div><div class="card-widget card-archives"><div class="item-headline"><i class="fas fa-archive"></i><span>Archives</span></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2024/03/"><span class="card-archive-list-date">March 2024</span><span class="card-archive-list-count">17</span></a></li></ul></div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>Info</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">Article :</div><div class="item-count">17</div></div><div class="webinfo-item"><div class="item-name">UV :</div><div class="item-count" id="busuanzi_value_site_uv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">PV :</div><div class="item-count" id="busuanzi_value_site_pv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">Last Update :</div><div class="item-count" id="last-push-date" data-lastPushDate="2024-03-25T11:51:16.412Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2024 By Mq-Lv</div><div class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="Toggle Between Light And Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle between Single-column and Double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="Setting"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="Back To Top"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=4.13.0"></script><script src="/js/main.js?v=4.13.0"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.33/dist/fancybox/fancybox.umd.min.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
+            <li class="card-category-list-item "><a class="card-category-list-link" href="/categories/JDBC/"><span class="card-category-list-name">JDBC</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/JUC/"><span class="card-category-list-name">JUC</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/JVM/"><span class="card-category-list-name">JVM</span><span class="card-category-list-count">8</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/MySQL%E5%AD%A6%E4%B9%A0/"><span class="card-category-list-name">MySQL学习</span><span class="card-category-list-count">5</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/Redis/"><span class="card-category-list-name">Redis</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E6%89%BE%E5%B7%A5%E4%BD%9C/"><span class="card-category-list-name">找工作</span><span class="card-category-list-count">4</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E6%A1%86%E6%9E%B6/"><span class="card-category-list-name">框架</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E7%AE%97%E6%B3%95/"><span class="card-category-list-name">算法</span><span class="card-category-list-count">4</span></a></li>
+            </ul></div><div class="card-widget card-tags"><div class="item-headline"><i class="fas fa-tags"></i><span>Tags</span></div><div class="card-tag-cloud"><a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/" style="font-size: 1.2em; color: #999da3">计算机网络</a> <a href="/tags/JDBC/" style="font-size: 1.1em; color: #999">JDBC</a> <a href="/tags/%E7%AE%97%E6%B3%95/" style="font-size: 1.3em; color: #99a1ac">算法</a> <a href="/tags/%E7%AE%80%E5%8E%86/" style="font-size: 1.3em; color: #99a1ac">简历</a> <a href="/tags/JVM/" style="font-size: 1.5em; color: #99a9bf">JVM</a> <a href="/tags/Redis/" style="font-size: 1.1em; color: #999">Redis</a> <a href="/tags/JUC/" style="font-size: 1.1em; color: #999">JUC</a> <a href="/tags/Maven/" style="font-size: 1.1em; color: #999">Maven</a> <a href="/tags/SSM/" style="font-size: 1.1em; color: #999">SSM</a> <a href="/tags/MySQL/" style="font-size: 1.4em; color: #99a5b6">MySQL</a></div></div><div class="card-widget card-archives"><div class="item-headline"><i class="fas fa-archive"></i><span>Archives</span></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2024/05/"><span class="card-archive-list-date">May 2024</span><span class="card-archive-list-count">13</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2024/03/"><span class="card-archive-list-date">March 2024</span><span class="card-archive-list-count">17</span></a></li></ul></div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>Info</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">Article :</div><div class="item-count">30</div></div><div class="webinfo-item"><div class="item-name">UV :</div><div class="item-count" id="busuanzi_value_site_uv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">PV :</div><div class="item-count" id="busuanzi_value_site_pv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">Last Update :</div><div class="item-count" id="last-push-date" data-lastPushDate="2024-05-14T03:18:19.751Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2024 By Mq-Lv</div><div class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="Toggle Between Light And Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle between Single-column and Double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="Setting"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="Back To Top"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=4.13.0"></script><script src="/js/main.js?v=4.13.0"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.33/dist/fancybox/fancybox.umd.min.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
